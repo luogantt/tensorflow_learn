@@ -16,14 +16,14 @@ from tensorflow.python.framework import graph_util
 #读取数据
 import pandas as pd
 
-file_path = './data/tiny_train_input.csv'
+#file_path = './data/tiny_train_input.csv'
 
-
+file_path = './df.csv'
 
 #读取文件为DataFrame 格式
-data2= pd.read_csv(file_path, header=None)
+data2= pd.read_csv(file_path)
 #对df的列重新命名
-data2.columns = ['c' + str(i) for i in range(data2.shape[1])]
+#data2.columns = ['c' + str(i) for i in range(data2.shape[1])]
 
 #考虑到数据比较大，我只用了20000条数据
 data1=data2.iloc[:20000]
